@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register with us</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <div class="signupdiv container my-3 border col-12 col-md-8 col-lg-8" id="signupdiv">
+    <h1 class="text-center my-3">SIGN UP</h1>
+    <label for="fname" class="form-label">First Name</label>
+    <input class="form-control form-control-lg" type="text" id="fname" placeholder="First name">
+    <div id="fnameval" class="mb-2">
+    </div>
+
+    <label for="lname" class="form-label">Last Name</label>
+    <input class="form-control form-control-lg" type="text" id="lname" placeholder="last name">
+    <div class="   mb-2" id="lnameval">
+    </div>
+
+    <label for="email" class="form-label">Email</label>
+    <input class="form-control form-control-lg" type="email" id="email" placeholder="Input mail here">
+    <div class="   mb-2" id="emailval">
+    </div>
+
+    <label for="pswd" class="form-label">Password</label>
+    <input class="form-control form-control-lg" type="text" id="pswd" placeholder="Input password Here">
+    <div class="   mb-2" id="pasval">
+    </div>
+
+    <label for="cpswd" class="form-label">Confirm Password</label>
+    <input class="form-control form-control-lg" type="text" id="cpswd" placeholder="Input password Here">
+    <div class="   mb-2" id="cpassval">
+    </div>
+
+    <button onclick="sign()" class="btn btn-primary my-3 container p-2 ">Signup</button>
+    <p class="text-center">if you have an account? <span id="spans"><a  href="#"  id="login">Login</a></span></p>
+  </div>
+
+
+  <div id="logindiv">
+    <h1 class="text-center my-3">LOGIN</h1>
+
+    <label for="loginemail" class="form-label">Email</label>
+    <input class="form-control form-control-lg" type="email" id="loginemail" placeholder="Input mail here">
+    <div class="   mb-2" id="loginemailval">
+    </div>
+
+    <label for="loginpswd" class="form-label">Password</label>
+    <input class="form-control form-control-lg" type="text" id="loginpswd" placeholder="Input password Here">
+    <div class="   mb-2" id="loginpasval">
+    </div>
+
+    <button onclick="Login()" class="btn btn-primary my-3 container p-3 ">Login</button>
+    <p class="text-center">if you dont have an account? <span id="spans"><a href="#" id="sign">Sign</a></span></p>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-0">© 2025 Library Management System. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <script src="../js file/login.js"></script>
+</body>
+
+</html>

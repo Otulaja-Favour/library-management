@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand animate_animated animatepulse animate_infinite" href="#">
+                <i class="bi bi-book"></i> Library Management System
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" id="searchForm">
+                    <input class="form-control me-2" type="search" id="searchInput" placeholder="Search books...">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-header">
+                <h1>About Our Library</h1>
+                <p>Welcome to our community hub of knowledge and learning. Discover our mission, history, and dedicated team.</p>
+            </div>
+            <div class="row">
+                <!-- Mission Statement -->
+                <div class="col-md-6">
+                    <div class="mission-card">
+                        <h3>Our Mission</h3>
+                        <p>We empower our community through free access to knowledge, fostering literacy, curiosity, and lifelong learning.</p>
+                        <img src="https://via.placeholder.com/300x200?text=Library+Interior" alt="Library interior with bookshelves" class="img-fluid rounded">
+                    </div>
+                </div>
+                <!-- Vision -->
+                <div class="col-md-6">
+                    <div class="mission-card">
+                        <h3>Our Vision</h3>
+                        <p>A vibrant, inclusive space where everyone can explore, learn, and connect through the power of information.</p>
+                        <img src="https://via.placeholder.com/300x200?text=Community+Reading" alt="Community reading event" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+            <!-- History Timeline -->
+            <div class="timeline">
+                <h3 class="text-center mb-4">Our History</h3>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>1900</h4>
+                        <p>Library founded with a small collection of 500 books.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>1950</h4>
+                        <p>Expanded to include a children’s wing and public programs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>2000</h4>
+                        <p>Launched digital catalog and eBook services.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>2025</h4>
+                        <p>Renovated main branch with modern tech and community spaces.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team -->
+            <div class="row">
+                <h3 class="text-center mb-4">Meet Our Team</h3>
+                <div class="col-md-4">
+                    <div class="team-card text-center">
+                        <img src="https://via.placeholder.com/150?text=Librarian" alt="Head Librarian Jane Doe" class="rounded-circle mb-3">
+                        <h4>Jane Doe</h4>
+                        <p>Head Librarian</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card text-center">
+                        <img src="https://via.placeholder.com/150?text=Assistant" alt="Assistant Librarian John Smith" class="rounded-circle mb-3">
+                        <h4>John Smith</h4>
+                        <p>Assistant Librarian</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card text-center">
+                        <img src="https://via.placeholder.com/150?text=Coordinator" alt="Program Coordinator Sarah Lee" class="rounded-circle mb-3">
+                        <h4>Sarah Lee</h4>
+                        <p>Program Coordinator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2025 Library Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Signika+Negative:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: Poppins !important;
+  
+}
+#signupdiv{
+  width: 50%;
+}
+#logindiv{
+  width: 50%;
+  display: none;
+  margin: 20px auto !important;
+}
+#card img{
+  width: 100%;
+}
+
+      #about {
+          padding: 60px 0;
+          background-color: #ffffff;
+      }
+      .about-header {
+          text-align: center;
+          margin-bottom: 40px;
+      }
+      .about-header h1 {
+          font-size: 2.5rem;
+          color: #003087;
+          font-weight: 700;
+      }
+      .about-header p {
+          font-size: 1.2rem;
+          color: #555;
+          max-width: 800px;
+          margin: 0 auto;
+      }
+      .mission-card, .team-card {
+          background-color: #f1f4ff;
+          border: none;
+          border-radius: 10px;
+          padding: 20px;
+          margin-bottom: 20px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .mission-card:hover, .team-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+      .timeline {
+          position: relative;
+          margin: 40px 0;
+      }
+      .timeline::before {
+          content: '';
+          position: absolute;
+          width: 6px;
+          background-color: #003087;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+      .timeline-item {
+          margin-bottom: 30px;
+          position: relative;
+          width: 50%;
+      }
+      .timeline-item:nth-child(odd) {
+          left: 0;
+          text-align: right;
+          padding-right: 30px;
+      }
+      .timeline-item:nth-child(even) {
+          left: 50%;
+          padding-left: 30px;
+      }
+      .timeline-item .timeline-content {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          position: relative;
+      }
+      .timeline-item .timeline-content::before {
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: #003087;
+          border-radius: 50%;
+          top: 20px;
+          right: -30px;
+      }
+      .timeline-item:nth-child(even) .timeline-content::before {
+          left: -30px;
+      }
+
+      /* Contact Section */
+      #contact {
+          padding: 60px 0;
+          background-color: #e9ecef;
+      }
+      .contact-header {
+          text-align: center;
+          margin-bottom: 40px;
+      }
+      .contact-header h2 {
+          font-size: 2.2rem;
+          color: #003087;
+          font-weight: 700;
+      }
+      .contact-form {
+          background-color: #fff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .form-control:focus {
+          border-color: #003087;
+          box-shadow: 0 0 5px rgba(0, 48, 135, 0.5);
+      }
+      .branch-info {
+          background-color: #f1f4ff;
+          padding: 20px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+      }
+      .map-container {
+          height: 300px;
+          border-radius: 10px;
+          overflow: hidden;
+      }
+      .social-links a {
+          color: #003087;
+          font-size: 1.5rem;
+          margin: 0 10px;
+          transition: color 0.3s ease;
+      }
+      .social-links a:hover {
+          color: #005bb5;
+      }
+
+      /* Footer */
+      footer {
+          background-color: #003087;
+          color: #fff;
+          padding: 20px 0;
+          text-align: center;
+      }
+      footer a {
+          color: #f1f4ff;
+          text-decoration: none;
+      }
+      footer a:hover {
+          text-decoration: underline;
+      }
+
+      /* Accessibility Enhancements */
+      .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          border: 0;
+      }
