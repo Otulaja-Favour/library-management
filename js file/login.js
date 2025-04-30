@@ -1,3 +1,5 @@
+
+
 let fname = document.getElementById('fname')
 let lname = document.getElementById('lname')
 let email = document.getElementById('email')
@@ -9,6 +11,8 @@ let users = JSON.parse(localStorage.getItem('user')) || []
 function saveToLocal() {
     localStorage.setItem('user', JSON.stringify(users))
 }
+
+
 
 
 fname.addEventListener('keypress', () => {
@@ -80,6 +84,9 @@ function sign() {
     if (!(fname.value && lname.value && email.value && pswd.value && cpswd.value)) {
         alert('okay')
     } else {
+
+        fetchExternalData();
+
         users.push({
             fname: fname.value,
             lname: lname.value,
@@ -112,34 +119,26 @@ let loginemail = document.getElementById('loginemail')
 let loginpswd = document.getElementById('loginpswd')
 
 function Login() {
+    if (loginemail.value === 'otulajafavour14@gmail.com' && loginpswd.value === 'qwerty12345we') {
+        alert('login succesfully')
+        window.location.href = 'admin.html'
+        return
+    }
     let savedUsers = JSON.parse(localStorage.getItem('user')) || [];
     // console.log(savedUsers);
 
     let foundData = savedUsers.find(user => user.email === loginemail.value && user.pswd === loginpswd.value)
-
-    window.location.href = 'members.html'
     if (foundData) {
         alert('okay')
-        // accesingLocalStorage()
+        
+        window.location.href = 'members.html'
+    return
     } else {
-        alert('damn')
+        // alert('6ttopss')
     }
 
 }
 
 
 
-  // For demonstration: Fetch external data 
-  async function fetchExternalData() {
-    try {
-      const response = await fetch('data.json');
-      const data = await response.json();
-      console.log('External data loaded:', data);
-    } catch (error) {
-      console.error('Error loading external data:', error);
-    }
-  }
-  
-  // Call fetch function
-  fetchExternalData();
 

@@ -6,6 +6,8 @@ const itemsPerPage = 12;
 // Store borrowed books in localStorage to persist between sessions
 let borrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks')) || [];
 console.log(borrowedBooks.length);
+const savedImages = JSON.parse(localStorage.getItem("profileImages")) || [];
+
 document.querySelector('#amount').innerHTML = borrowedBooks.length;
 
 function saveBorrowedBooks() {
@@ -13,18 +15,34 @@ function saveBorrowedBooks() {
     document.querySelector('#amount').innerHTML = borrowedBooks.length;
 }
 
+const userSearchInput = document.getElementById('userSearchInput');
+let allBooks = []; // to store all fetched books for search
+
 async function gettingData() {
     try {
         const response = await fetch("https://openlibrary.org/search.json?q=book");
         const result = await response.json();
-        console.log(result);
-        setupPagination(result.docs);
-        displayPage(result.docs, currentPage);
-        displayBorrowedBooks(); // Display any previously borrowed books
+        allBooks = result.docs; // store all books for search
+        setupPagination(allBooks);
+        displayPage(allBooks, currentPage);
+        displayBorrowedBooks();
     } catch (error) {
         console.error('Error fetching books:', error);
     }
 }
+userSearchInput.addEventListener('input', () => {
+    const searchTerm = userSearchInput.value.toLowerCase();
+
+    const filteredBooks = allBooks.filter(book => {
+        const title = book.title?.toLowerCase() || '';
+        const author = book.author_name?.[0]?.toLowerCase() || '';
+        return title.includes(searchTerm) || author.includes(searchTerm);
+    });
+
+    currentPage = 1;
+    setupPagination(filteredBooks);
+    displayPage(filteredBooks, currentPage);
+});
 
 function displayPage(data, page) {
     const startIndex = (page - 1) * itemsPerPage;
@@ -162,7 +180,7 @@ function setupPagination(data) {
     // Create Previous Button
     const prevButton = document.createElement('button');
     prevButton.textContent = 'Previous';
-    prevButton.className = 'btn btn-secondary me-2';
+    prevButton.className = 'btn btn-primary me-2';
     prevButton.disabled = currentPage === 1;
     prevButton.addEventListener('click', () => {
         if (currentPage > 1) {
@@ -182,7 +200,7 @@ function setupPagination(data) {
     // Create Next Button
     const nextButton = document.createElement('button');
     nextButton.textContent = 'Next';
-    nextButton.className = 'btn btn-secondary ms-2';
+    nextButton.className = 'btn btn-primary ms-2';
     nextButton.disabled = currentPage === totalPages;
     nextButton.addEventListener('click', () => {
         if (currentPage < totalPages) {
@@ -196,8 +214,11 @@ function setupPagination(data) {
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
+    
     gettingData();
+   
 });
+// });
 
 
 // main.js
