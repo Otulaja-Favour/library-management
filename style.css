@@ -172,3 +172,39 @@ body{
           clip: rect(0, 0, 0, 0);
           border: 0;
       }
+      .book-item {
+        margin-bottom: 20px;
+    }
+    .borrowed-item {
+        margin-bottom: 15px;
+        /* overflow: scroll; */
+    }
+    #task {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .card img {
+        height: 250px;
+        object-fit: cover;
+    }
+    #borrowedBooks {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        overflow: scroll !important;
+        height: 200px;
+    }
+    #pagination {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+@media screen and (max-width:900px) {
+    #logindiv, #signupdiv{
+        width: 99%;
+    }
+}

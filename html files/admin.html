@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Portal - Library Management System</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand animate_animated animatepulse animate_infinite" href="#">
-                <i class="bi bi-book"></i> Library Management System - Admin
+                <i class="bi bi-book"></i> library
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -20,14 +24,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link" href="./admin.html">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
-                    </li>
+
                 </ul>
                 <div class="d-flex">
                     <span class="text-light me-3"><i class="bi bi-person-circle"></i> Admin</span>
@@ -55,15 +54,13 @@
                     <a href="#" class="list-group-item list-group-item-action" id="borrowingsNav">
                         <i class="bi bi-arrow-left-right"></i> Borrowings
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action" id="reportsNav">
-                        <i class="bi bi-bar-chart"></i> Reports
-                    </a>
+
                     <a href="#" class="list-group-item list-group-item-action" id="settingsNav">
                         <i class="bi bi-gear"></i> Settings
                     </a>
                 </div>
             </div>
-            
+
             <!-- Main Panel -->
             <div class="col-md-9 col-lg-10">
                 <!-- Dashboard Section -->
@@ -127,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-8">
                             <div class="card shadow-sm mb-4">
@@ -167,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Books Management Section -->
                 <div id="booksSection" class="d-none animate_animated animate_fadeIn">
                     <div class="row mb-4">
@@ -180,13 +177,14 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="card shadow-sm">
                         <div class="card-body">
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="bookSearchInput" placeholder="Search books...">
+                                        <input type="text" class="form-control" id="bookSearchInput"
+                                            placeholder="Search books...">
                                         <button class="btn btn-primary" id="bookSearchBtn">
                                             <i class="bi bi-search"></i>
                                         </button>
@@ -209,7 +207,7 @@
                                     </select>
                                 </div>
                             </div>
-                            
+
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead>
@@ -227,7 +225,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            
+
                             <nav aria-label="Books pagination">
                                 <ul class="pagination justify-content-center" id="booksPagination">
                                     <!-- Pagination will be generated here -->
@@ -236,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Members Management Section -->
                 <div id="membersSection" class="d-none animate_animated animate_fadeIn">
                     <div class="row mb-4">
@@ -249,13 +247,14 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="card shadow-sm">
                         <div class="card-body">
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="memberSearchInput" placeholder="Search members...">
+                                        <input type="text" class="form-control" id="memberSearchInput"
+                                            placeholder="Search members...">
                                         <button class="btn btn-primary" id="memberSearchBtn">
                                             <i class="bi bi-search"></i>
                                         </button>
@@ -276,7 +275,7 @@
                                     </select>
                                 </div>
                             </div>
-                            
+
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead>
@@ -295,7 +294,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            
+
                             <nav aria-label="Members pagination">
                                 <ul class="pagination justify-content-center" id="membersPagination">
                                     <!-- Pagination will be generated here -->
@@ -304,18 +303,159 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Other sections (Borrowings, Reports, Settings) would be structured similarly -->
+
+                <!-- Borrowings Management Section -->
                 <div id="borrowingsSection" class="d-none animate_animated animate_fadeIn">
-                    <h2 class="border-bottom pb-2 mb-4">Borrowings Management</h2>
-                    <!-- Borrowings content here -->
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <h2 class="border-bottom pb-2">Borrowings Management</h2>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBorrowingModal">
+                                <i class="bi bi-plus-circle"></i> New Borrowing
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="borrowingSearchInput"
+                                            placeholder="Search by book or member...">
+                                        <button class="btn btn-primary" id="borrowingSearchBtn">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select" id="borrowingStatusSelect">
+                                        <option value="all">All Status</option>
+                                        <option value="active">Active</option>
+                                        <option value="returned">Returned</option>
+                                        <option value="overdue">Overdue</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select" id="borrowingSortSelect">
+                                        <option value="date">Sort by Date</option>
+                                        <option value="dueDate">Sort by Due Date</option>
+                                        <option value="member">Sort by Member</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Book</th>
+                                            <th>Member</th>
+                                            <th>Borrow Date</th>
+                                            <th>Due Date</th>
+                                            <th>Return Date</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="borrowingsTableBody">
+                                        <!-- Borrowings will be loaded here -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <nav aria-label="Borrowings pagination">
+                                <ul class="pagination justify-content-center" id="borrowingsPagination">
+                                    <!-- Pagination will be generated here -->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
-                
-                <div id="reportsSection" class="d-none animate_animated animate_fadeIn">
-                    <h2 class="border-bottom pb-2 mb-4">Reports</h2>
-                    <!-- Reports content here -->
-                </div>
-                
+
+                <!-- Settings Section -->
                 <div id="settingsSection" class="d-none animate_animated animate_fadeIn">
-                    <h2 class="border-bottom pb-2 mb-4">
-                    
+                    <h2 class="border-bottom pb-2 mb-4">Settings</h2>
+
+                    <div class="row">
+
+
+                        <div class="col-md-9">
+                            <!-- General Settings Panel -->
+                            <div class="card shadow-sm mb-4" id="generalSettings">
+                                <div class="card-header bg-light">
+                                    <h5 class="card-title mb-0">General Settings</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form id="generalSettingsForm">
+                                        <div class="mb-3">
+                                            <label for="libraryName" class="form-label">Library Name</label>
+                                            <input type="text" class="form-control" id="libraryName" value="">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="contactEmail" class="form-label">Contact Email</label>
+                                            <input type="email" class="form-control" id="contactEmail" value="">
+                                        </div>
+
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="enableNotifications"
+                                                checked>
+                                            <label class="form-check-label" for="enableNotifications">Enable Email
+                                                Notifications</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Save Settings</button>
+                                    </form>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <div class="container">
+            <p>&copy; 2025 Library Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JoDHj1q0dO8O1unB3rH6v0aG9TLN7s1mZ2zK3xM2uO6y5e9f1j8bH5l5v5j5k5H"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+
+        document.querySelectorAll('.list-group-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const sections = ['dashboardSection', 'booksSection', 'membersSection', 'borrowingsSection', 'settingsSection'];
+                sections.forEach(section => {
+                    document.getElementById(section).classList.add('d-none');
+                });
+
+                const targetSection = this.id.replace('Nav', 'Section');
+                document.getElementById(targetSection).classList.remove('d-none');
+            });
+        });
+
+
+        document.getElementById('logoutBtn').addEventListener('click', function () {
+            if (confirm('Are you sure you want to logout?')) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

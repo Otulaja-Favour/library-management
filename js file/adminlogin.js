@@ -90,6 +90,7 @@ function handleLogin() {
 
     if (adminFoundData) {
         alert(`Welcome back, ${adminFoundData.name}!`);
+        window.location.href = '../html files/admin.html'
     } else {
         alert('Invalid email or password. Please try again.');
         let errors = document.querySelectorAll('.error-message')
